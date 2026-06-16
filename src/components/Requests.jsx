@@ -43,7 +43,7 @@ const Requests = () => {
       <h1 className="text-bold text-white text-3xl">Connection Requests</h1>
 
       {requests.map((request) => {
-        const { _id, firstName, lastName, photoUrl, age, gender, about } =
+        const { _id, firstName, lastName, photoURL, age, gender, about } =
           request.fromUserId;
 
         return (
@@ -55,7 +55,7 @@ const Requests = () => {
               <img
                 alt="photo"
                 className="w-20 h-20 rounded-full"
-                src={photoUrl}
+                src={photoURL}
               />
             </div>
             <div className="text-left mx-4 ">

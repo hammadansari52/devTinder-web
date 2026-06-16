@@ -8,7 +8,7 @@ import { addUser } from "../utils/userSlice";
 const EditProfile = ({ user }) => {
   const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setLastName] = useState(user.lastName);
-  const [photoUrl, setPhotoUrl] = useState(user.photoUrl);
+  const [photoURL, setPhotoUrl] = useState(user.photoURL);
   const [age, setAge] = useState(user.age || "");
   const [gender, setGender] = useState(user.gender || "");
   const [about, setAbout] = useState(user.about || "");
@@ -25,7 +25,7 @@ const EditProfile = ({ user }) => {
         {
           firstName,
           lastName,
-          photoUrl,
+          photoURL,
           age,
           gender,
           about,
@@ -78,7 +78,7 @@ const EditProfile = ({ user }) => {
                   </div>
                   <input
                     type="text"
-                    value={photoUrl}
+                    value={photoURL}
                     className="input input-bordered w-full max-w-xs"
                     onChange={(e) => setPhotoUrl(e.target.value)}
                   />
@@ -127,7 +127,7 @@ const EditProfile = ({ user }) => {
           </div>
         </div>
         <UserCard
-          user={{ firstName, lastName, photoUrl, age, gender, about }}
+          user={{ firstName, lastName, photoURL, age, gender, about }}
         />
       </div>
       {showToast && (
