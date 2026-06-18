@@ -25,7 +25,7 @@ const Requests = () => {
         withCredentials: true,
       });
 
-      dispatch(addRequests(res.data.data));
+      dispatch(addRequests(res.data));
     } catch (err) {}
   };
 
